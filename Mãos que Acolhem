@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mãos que Acolhem</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #fffaf5, #fbe9dd);
+    color: #4a3f35;
+}
+
+/* header */
+header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.logo {
+    font-size: 45px;
+    color: #d4a373;
+}
+
+.logo span {
+    display: block;
+    font-size: 30px;
+    margin-top: 10px;
+    color: #6b4f3f;
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #8a6f5a;
+}
+
+/* container */
+.container {
+    max-width: 850px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    text-align: center;
+    animation: fadeIn 1.2s ease;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.highlight {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #b08968;
+    background: #fff1e6;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+/* botão whatsapp */
+.whatsapp {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 25px;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.whatsapp:hover {
+    transform: scale(1.05);
+    background: #1ebc5b;
+}
+
+/* pix */
+.pix-box {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fffaf5;
+    border: 2px dashed #d4a373;
+    border-radius: 14px;
+}
+
+.pix-box h2 {
+    margin: 0;
+    color: #6b4f3f;
+    font-size: 22px;
+}
+
+.pix-box p {
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.pix-chave {
+    font-weight: bold;
+    color: #b08968;
+    font-size: 18px;
+    word-break: break-word;
+}
+
+.copy-btn {
+    margin-top: 15px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #d4a373;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.copy-btn:hover {
+    background: #b08968;
+    transform: scale(1.05);
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    color: #7b6b5c;
+}
+
+/* animação */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        💛🤲
+        <span>Mãos que Acolhem</span>
+    </div>
+    <div class="subtitle">
+        Acolhendo com amor, vestindo com propósito
+    </div>
+</header>
+
+<div class="container">
+
+    <p>
+        Nosso projeto tem como missão levar carinho, dignidade e cuidado através de peças feitas com amor.
+    </p>
+
+    <p class="doacao">
+        💛 Ao adquirir uma peça, você também contribui com ações solidárias e ajuda quem mais precisa.
+    </p>
+
+    <p>
+        Disponível nos tamanhos: P, M, G, GG e EGG.
+    </p>
+    
+    <p class="highlight">
+        Peças sob encomenda, com prazo de até 12 dias úteis após a confirmação da compra.
+    </p>
+
+    <a href="https://wa.me/5533997031499" target="_blank" class="whatsapp">
+        Quero ajudar / Falar no WhatsApp
+    </a>
+
+    <div class="pix-box">
+        <h2>💳 Doação via Pix</h2>
+        <p>Se quiser ajudar diretamente, use a chave Pix abaixo:</p>
+        
+        <p class="pix-chave" id="pixKey">33997031499</p>
+
+        <button class="copy-btn" onclick="copiarPix()">
+            📋 Copiar chave Pix
+        </button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 - Mãos que Acolhem • Projeto solidário
+</footer>
+
+<script>
+function copiarPix() {
+    let pix = document.getElementById("pixKey").innerText;
+    navigator.clipboard.writeText(pix);
+    alert("Chave Pix copiada: " + pix);
+}
+</script>
+
+</body>
+</html>
